@@ -1,0 +1,17 @@
+@use "fonts.scss";
+
+$main-font: "Roboto", sans-serif;
+
+$color-main-theme: #3a30f8;
+$color-main-background: #ffffff;
+$color-main-text: #000000;
+$color-muted-text: #777777;
+$color-border-table: #d9d9d9;
+$color-alter-bg: #292929;
+$color-background-inscription: rgba(0, 0, 0, 0.03);
+$color-background-inscription-alter: rgba(255, 255, 255, 0.2);
+$color-background-inscription-alter-muted: rgba(255, 255, 255, 0.08);
+$color-main-theme-accent: #f23838;
+
+$tablet-width: 768px;
+$desktop-width: 1920px;

@@ -1,0 +1,275 @@
+@use "variables.scss" as var;
+
+@mixin font-main-text {
+    font-family: var.$main-font;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@mixin font-alter-text {
+    @include font-main-text;
+
+    color: var.$color-main-background;
+}
+
+@mixin font-main-text-muted {
+    @include font-main-text;
+
+    color: var.$color-muted-text;
+}
+
+@mixin font-main-text-accented {
+    @include font-main-text;
+
+    font-weight: 700;
+}
+
+@mixin font-small-text {
+    font-family: var.$main-font;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        line-height: 20px;
+    }
+}
+
+@mixin font-small-text-alter {
+    @include font-small-text;
+
+    color: var.$color-main-background;
+}
+
+@mixin font-placeholder {
+    font-family: var.$main-font;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var.$color-main-background;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@mixin font-text-extra-small {
+    font-family: var.$main-font;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var.$color-border-table;
+}
+
+@mixin font-main-heading {
+    font-family: var.$main-font;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        font-size: 80px;
+        line-height: 100px;
+    }
+}
+
+@mixin font-section-heading {
+    font-family: var.$main-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@mixin font-section-subheading {
+    font-family: var.$main-font;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+@mixin font-section-subheading-alter {
+    @include font-section-subheading;
+
+    color: var.$color-main-background;
+}
+
+@mixin font-sub-subheading {
+    font-family: var.$main-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@mixin font-sub-subheading-alter {
+    @include font-sub-subheading;
+
+    color: var.$color-main-background;
+}
+
+@mixin font-main-menu {
+    font-family: var.$main-font;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var.$color-main-text;
+}
+
+@mixin font-promo-text {
+    font-family: var.$main-font;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+@mixin font-button-main {
+    font-family: var.$main-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@mixin font-button-alter {
+    @include font-button-main;
+    color: var.$color-main-background;
+}
+
+@mixin font-button-watch {
+    font-family: var.$main-font;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var.$color-main-text;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@mixin font-spec-value {
+    font-family: var.$main-font;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 900;
+    color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 48px;
+        line-height: 54px;
+    }
+}
+
+@mixin font-spec-unit {
+    font-family: var.$main-font;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@mixin font-background {
+    font-family: var.$main-font;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var.$color-background-inscription;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        font-size: 200px;
+        line-height: 240px;
+    }
+}
+
+@mixin font-background-alter {
+    @include font-background;
+
+    color: var.$color-background-inscription-alter;
+}
+
+@mixin font-background-alter-muted {
+    @include font-background;
+
+    color: var.$color-background-inscription-alter-muted;
+}
+
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
