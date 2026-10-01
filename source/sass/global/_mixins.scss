@@ -34,7 +34,6 @@
 }
 
 @mixin font-small-text {
-    font-family: var.$main-font;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
@@ -51,8 +50,13 @@
     color: var.$color-main-background;
 }
 
+@mixin font-small-text-muted {
+    @include font-small-text;
+
+    color: var.$color-muted-text;
+}
+
 @mixin font-placeholder {
-    font-family: var.$main-font;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -65,7 +69,6 @@
 }
 
 @mixin font-text-extra-small {
-    font-family: var.$main-font;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -73,7 +76,6 @@
 }
 
 @mixin font-main-heading {
-    font-family: var.$main-font;
     font-size: 40px;
     line-height: 50px;
     font-weight: 900;
@@ -92,7 +94,6 @@
 }
 
 @mixin font-section-heading {
-    font-family: var.$main-font;
     font-size: 16px;
     line-height: 20px;
     font-weight: 900;
@@ -107,7 +108,6 @@
 }
 
 @mixin font-section-subheading {
-    font-family: var.$main-font;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
@@ -126,7 +126,6 @@
 }
 
 @mixin font-sub-subheading {
-    font-family: var.$main-font;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -147,7 +146,6 @@
 }
 
 @mixin font-main-menu {
-    font-family: var.$main-font;
     font-size: 14px;
     line-height: 18px;
     font-weight: 500;
@@ -157,7 +155,6 @@
 }
 
 @mixin font-promo-text {
-    font-family: var.$main-font;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -177,7 +174,6 @@
 }
 
 @mixin font-button-main {
-    font-family: var.$main-font;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -197,7 +193,6 @@
 }
 
 @mixin font-button-watch {
-    font-family: var.$main-font;
     font-size: 14px;
     line-height: 18px;
     font-weight: 500;
@@ -212,7 +207,6 @@
 }
 
 @mixin font-spec-value {
-    font-family: var.$main-font;
     font-size: 36px;
     line-height: 42px;
     font-weight: 900;
@@ -225,7 +219,6 @@
 }
 
 @mixin font-spec-unit {
-    font-family: var.$main-font;
     font-size: 14px;
     line-height: 18px;
     font-weight: 700;
@@ -237,8 +230,19 @@
     }
 }
 
+@mixin font-spec-value-small {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 900;
+    color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
 @mixin font-background {
-    font-family: var.$main-font;
     font-size: 50px;
     line-height: 60px;
     font-weight: 900;
