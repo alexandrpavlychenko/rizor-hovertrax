@@ -1,6 +1,7 @@
 @use "fonts.scss";
 
 $main-font: "Roboto", sans-serif;
+$heading-font: "Rubik Mono One", sans-serif;
 
 $color-main-theme: #3a30f8;
 $color-main-background: #ffffff;
@@ -11,7 +12,6 @@ $color-alter-bg: #292929;
 $color-background-inscription: rgba(0, 0, 0, 0.03);
 $color-background-inscription-alter: rgba(255, 255, 255, 0.2);
 $color-background-inscription-alter-muted: rgba(255, 255, 255, 0.08);
-$color-main-theme-accent: #f23838;
 
 $tablet-width: 768px;
 $desktop-width: 1920px;

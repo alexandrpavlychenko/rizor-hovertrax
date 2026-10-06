@@ -1,0 +1,6 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.slides-list {
+    @include mix.list-reset;
+}

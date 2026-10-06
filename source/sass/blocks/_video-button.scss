@@ -1,0 +1,69 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.video-button {
+    border: none;
+    width: 100%;
+    height: 100%;
+
+    @include mix.font-button-watch;
+
+    background-color: transparent;
+}
+
+.video-button__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    width: 69px;
+
+    transform: translate(-50%, -50%) rotate(270deg);
+
+    &::after {
+        content: "";
+
+        width: 63px;
+        height: 69px;
+
+        mask-image: url("../img/icons/sprite-bg.svg#video-button-view");
+        mask-repeat: no-repeat;
+        mask-size: 63px 69px;
+        background-color: var.$color-main-theme;
+
+        transform: rotate(90deg);
+    }
+
+    @media (min-width: var.$desktop-width) {
+        left: -8px;
+        top: 108px;
+    }
+}
+
+.video-button:hover {
+    cursor: pointer;
+}
+
+.video-button:hover .video-button__text,
+.video-button:focus-visible .video-button__text {
+    color: var.$color-main-background;
+
+    @media (min-width: var.$desktop-width) {
+        color: var.$color-main-theme;
+    }
+
+    &::after {
+        background-color: var.$color-main-text;
+    }
+}
+
+.video-button:active .video-button__text {
+    color: var.$color-main-text;
+
+    &::after {
+        background-color: var.$color-main-theme;
+    }
+}

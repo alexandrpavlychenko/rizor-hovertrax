@@ -1,0 +1,7 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.video__content {
+    max-width: 100%;
+    height: auto;
+}

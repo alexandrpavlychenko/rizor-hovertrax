@@ -1,0 +1,120 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.promo {
+    padding: 0 0 60px;
+
+    text-align: center;
+
+    @media (min-width: var.$tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 48px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        justify-content: flex-start;
+
+        text-align: left;
+    }
+}
+
+.promo__text-content {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 30px 0;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 15px 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 auto;
+        width: 420px;
+        padding: 184px 0;
+
+        &::after {
+            content: "";
+
+            margin: 0 0 0 38px;
+            width: 9px;
+            height: 94px;
+
+            mask-image: url("../img/icons/sprite-bg.svg#promo-arrow-between-sections-view");
+            mask-repeat: no-repeat;
+            mask-size: 9px 94px;
+            background-color: var.$color-main-theme;
+        }
+    }
+}
+
+.promo__main-heading {
+    position: relative;
+
+    margin: 0 0 12px;
+
+    @include mix.font-main-heading;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 18px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 398px;
+            top: -35px;
+
+            display: block;
+            width: 22px;
+            height: 78px;
+
+            mask-image: url("../img/icons/sprite-bg.svg#promo-video-arrow-view");
+            mask-repeat: no-repeat;
+            mask-size: 22px 78px;
+            background-color: var.$color-border-table;
+        }
+    }
+}
+
+.promo__main-heading-numbers {
+    @include mix.font-main-heading-numbers;
+}
+
+.promo__inscription {
+    @include mix.font-promo-text;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 35px 0;
+        padding: 0 0 0 7px;
+    }
+}
+
+.promo__video {
+    position: relative;
+
+    z-index: 1;
+}
+
+.promo__video-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.promo__decor-picture {
+    top: -35px;
+}
+
+.promo__section-number-list {
+    top: -15px;
+    bottom: -15px;
+}

@@ -14,28 +14,31 @@
     <meta property="og:locale" content="en_US">
     <link rel="canonical" href="https://alexandrpavlychenko.github.io/rizor-hovertrax/">
     <link rel="preload" href="css/style.min.css" as="style">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" type="font/woff2" href="fonts/roboto-latin-900-normal.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" type="font/woff2" href="fonts/roboto-latin-500-normal.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" type="font/woff2" href="fonts/rubik-mono-one-latin-400-normal.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="fonts/roboto-latin-700-normal.woff2" as="font" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png" sizes="180x180">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" sizes="16x16">
     <link rel="manifest" href="manifest.webmanifest">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page__body">
     <header class="page__header page-header">
-        <div class="container">
+        <div class="container container--small">
             <nav class="page-header__main-nav page-header__main-nav--opened">
-                <a href="index.html" aria-label="Rizor Hovertrax home page." class="page-header__logo logo">
-                    <picture class="logo__picture">
-                        <source type="image/avif" srcset="img/avif/logo.avif">
-                        <source type="image/webp" srcset="img/webp/logo.webp">
-                        <img class="logo__image" src="img/logo.png" width="156" height="39" loading="eager" fetchpriority="high" alt="Rizor Hovertrax logo.">
-                    </picture>
-                </a>
-                <button aria-expanded="false" aria-controls="main-menu" class="page-header__main-nav-toggle" type="button">
-                    <span class="page-header__main-nav-burger"></span>
-                    <span class="page-header__main-nav-button-action-text visually-hidden">Open site menu</span>
-                </button>
+                <div class="page-header__main-nav-logo-burger-wrapper">
+                    <a href="index.html" aria-label="Rizor Hovertrax home page." class="page-header__logo logo">
+                        <picture class="logo__picture">
+                            <source type="image/avif" srcset="img/avif/logo.avif">
+                            <source type="image/webp" srcset="img/webp/logo.webp">
+                            <img class="logo__image" src="img/logo.png" width="156" height="39" loading="eager" fetchpriority="high" alt="Rizor Hovertrax logo.">
+                        </picture>
+                    </a>
+                    <button aria-expanded="false" aria-controls="main-menu" class="page-header__main-nav-toggle" type="button">
+                        <span class="page-header__main-nav-burger"></span>
+                        <span class="page-header__main-nav-button-action-text visually-hidden">Open site menu</span>
+                    </button>
+                </div>
                 <ul class="page-header__main-nav-list">
                     <li class="page-header__main-nav-item">
                         <a href="#section-advantages" class="page-header__main-nav-link page-header__main-nav-link--accented">Advantages</a>
@@ -56,8 +59,8 @@
     <main class="page__main">
         <div class="container">
             <section class="page__section promo">
-                <div class="promo__text">
-                    <h1 class="promo__main-heading">Rizor Hovertrax&nbsp;4.0</h1>
+                <div class="promo__text-content">
+                    <h1 class="promo__main-heading">Rizor Hovertrax <span class="promo__main-heading-numbers">4.0</span></h1>
                     <h2 class="visually-hidden">Introduction</h2>
                     <p class="promo__inscription">Manoeuvrability, lightness, eco&#8209;friendliness</p>
                 </div>
@@ -66,7 +69,9 @@
                         <!--<source src="#" type="video/webm">
                         <source src="#" type="video/mp4">-->
                     </video>
-                    <button type="button" class="promo__video-button video-button">Watch video</button>
+                    <button type="button" class="promo__video-button video-button">
+                        <span class="video-button__text">Watch video</span>
+                    </button>
                 </div>
                 <picture class="promo__decor-picture decor-picture decor-picture--alter">
                     <source type="image/avif" srcset="img/avif/gear.avif">
@@ -99,12 +104,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="subsection__video subsection__video--alter">
-                        <video preload="metadata" poster="img/photo-12.jpg" width="745" height="750" class="subsection__video-content">
+                    <div class="subsection__video video video--alter">
+                        <video preload="metadata" poster="img/photo-12.jpg" width="745" height="750" class="video__content">
                             <!--<source src="#" type="video/webm">
                             <source src="#" type="video/mp4">-->
                         </video>
-                        <button type="button" class="subsection__video-button video-button video-button--alter">
+                        <button type="button" class="video__button video-button video-button--alter">
                             <span class="visually-hidden">Watch video</span>
                         </button>
                     </div>
@@ -193,12 +198,14 @@
                     <h3 class="subsection__heading">Indicators</h3>
                     <p class="subsection__text">LED indicators let&nbsp;others know when you’re about to&nbsp;turn. They&nbsp;respond instantly to&nbsp;shifts in&nbsp;your centre of&nbsp;gravity to&nbsp;the&nbsp;left or&nbsp;right by&nbsp;flashing.</p>
                     <p class="subsection__text">Once&nbsp;you’re moving straight ahead again, the&nbsp;flashing stops and&nbsp;the&nbsp;lights return to&nbsp;a&nbsp;solid line.</p>
-                    <div class="subsection__video">
-                        <video preload="metadata" poster="img/photo-9.jpg" width="830" height="400" class="subsection__video-content">
+                    <div class="subsection__video video">
+                        <video preload="metadata" poster="img/photo-9.jpg" width="830" height="400" class="video__content">
                             <!--<source src="#" type="video/webm">
                             <source src="#" type="video/mp4">-->
                         </video>
-                        <button type="button" class="subsection__video-button video-button">Watch video</button>
+                        <button type="button" class="video__button video-button">
+                            <span class="video-button__text">Watch video</span>
+                        </button>
                     </div>
                 </div>
                 <div class="advantages__modes subsection">
@@ -224,12 +231,14 @@
                             </div>
                         </dl>
                     </div>
-                    <div class="subsection__video">
-                        <video preload="metadata" poster="img/photo-8.jpg" width="1075" height="750" class="subsection__video-content">
+                    <div class="subsection__video video">
+                        <video preload="metadata" poster="img/photo-8.jpg" width="1075" height="750" class="video__content">
                             <!--<source src="#" type="video/webm">
                             <source src="#" type="video/mp4">-->
                         </video>
-                        <button type="button" class="subsection__video-button subsection__video-button--position-alter video-button">Watch video</button>
+                        <button type="button" class="video__button video-button video-button--position-alter">
+                            <span class="video-button__text">Watch video</span>
+                        </button>
                     </div>
                 </div>
                 <div class="advantages__battery subsection">
@@ -283,6 +292,15 @@
                             </div>
                         </dl>
                     </div>
+                    <div class="subsection__video video video--alter">
+                        <video preload="metadata" poster="img/photo-11.jpg" width="400" height="280" class="video__content">
+                            <!--<source src="#" type="video/webm">
+                            <source src="#" type="video/mp4">-->
+                        </video>
+                        <button type="button" class="video__button video-button video-button--alter">
+                            <span class="visually-hidden">Watch video</span>
+                        </button>
+                    </div>
                 </div>
                 <ol class="advantages__section-number-list section-number-list">
                     <li class="section-number-list__item"></li>
@@ -296,7 +314,7 @@
                     <source type="image/webp" srcset="img/webp/gear.webp">
                     <img class="advantages__decor-image" src="img/gear.png" width="511" height="878" loading="lazy" alt="">
                 </picture>
-                <span class="advantages__subscription rizor-four-and-zero-subscription">4.0 Rizor</span>
+                <span class="advantages__subscription rizor-four-and-zero-subscription rizor-four-and-zero-subscription--position-alter"><span class="rizor-four-and-zero-subscription__numbers">4.0</span> Rizor</span>
             </section>
             <section id="section-characteristics" class="page__section characteristics">
                 <div class="characteristics__basics characteristics-basics subsection">
@@ -358,7 +376,7 @@
                             <source type="image/webp" srcset="img/webp/photo-13.webp">
                             <img class="characteristics-audience__image" src="img/photo-13.png" width="1075" height="750" loading="lazy" alt="Two cheerful teenagers, a boy with a slightly darker complexion and black hair and a taller girl with fair skin and fair hair, dressed in stylish streetwear, sit on a bench with their feet on Rizor Hovertrax 4.0 hoverboards.">
                         </picture>
-                        <span class="characteristics-audience__subscription rizor-four-and-zero-subscription rizor-four-and-zero-subscription--alter">4.0 Rizor</span>
+                        <span class="characteristics-audience__subscription rizor-four-and-zero-subscription rizor-four-and-zero-subscription--position-alter">4.0 Rizor</span>
                     </div>
                 </div>
                 <ol class="characteristics__section-number-list section-number-list">
@@ -373,7 +391,7 @@
                     <source type="image/webp" srcset="img/webp/gear.webp">
                     <img class="characteristics__decor-image" src="img/gear.png" width="511" height="878" loading="lazy" alt="">
                 </picture>
-                <span class="characteristics__subscription rizor-four-and-zero-subscription">4.0 Rizor</span>
+                <span class="characteristics__subscription rizor-four-and-zero-subscription rizor-four-and-zero-subscription--alter"><span class="rizor-four-and-zero-subscription__numbers">4.0</span> Rizor</span>
             </section>
             <section id="section-reviews" class="page__section reviews">
                 <div class="reviews__user-ratings subsection">
@@ -618,7 +636,7 @@
                     <li class="section-number-list__item section-number-list__item--current"></li>
                     <li class="section-number-list__item"></li>
                 </ol>
-                <span class="reviews__subscription rizor-four-and-zero-subscription">4.0 Rizor</span>
+                <span class="reviews__subscription rizor-four-and-zero-subscription"><span class="rizor-four-and-zero-subscription__numbers">4.0</span> Rizor</span>
             </section>
             <section id="section-models-comparison" class="page__section models-comparison subsection">
                 <div class="subsection__text-content">
@@ -697,9 +715,23 @@
         </div>
     </main>
     <footer class="page__footer page-footer">
-        <div class="container">
+        <div class="container container--small">
             <p class="page-footer__copyright">© All rights reserved, 2017</p>
         </div>
     </footer>
+    <!--<div style="
+      position: absolute;
+      top: 0;
+      width: 1920px;
+      height: 8953px;
+      margin: 0 auto;
+      background-image: url('img/_preview-case-08.jpg');
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: invert(1);
+    "></div> -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>

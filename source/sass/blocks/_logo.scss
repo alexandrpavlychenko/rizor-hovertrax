@@ -1,0 +1,19 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.logo {
+    align-items: center;
+    width: 156px;
+    height: 39px;
+
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}

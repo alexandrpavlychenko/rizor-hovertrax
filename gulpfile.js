@@ -153,40 +153,73 @@ export function spriteBg() {
             files.push(file);
             callback();
         }, function (callback) {
-            const $ = load('<svg xmlns="http://www.w3.org/2000/svg"></svg>', {
-                xml: true
-            });
+            const $ = load(
+                '<svg xmlns="http://www.w3.org/2000/svg"></svg>',
+                {xml: true}
+            );
 
             const root = $('svg');
-            const size = 24;
 
-            files.forEach((file, index) => {
+            let offsetY = 0;
+            let spriteWidth = 0;
+
+            files.forEach((file) => {
                 const svg = load(file.contents.toString(), {
                     xml: true
                 });
 
+                const sourceRoot = svg('svg').first();
+                const viewBox = sourceRoot.attr('viewBox');
+
+                if (!viewBox) {
+                    throw new Error(
+                        `SVG "${file.stem}" does not have a viewBox`
+                    );
+                }
+
+                const [minX, minY, width, height] = viewBox
+                    .trim()
+                    .split(/\s+/)
+                    .map(Number);
+
+                if (
+                    [minX, minY, width, height].some(Number.isNaN) ||
+                    width <= 0 ||
+                    height <= 0
+                ) {
+                    throw new Error(
+                        `SVG "${file.stem}" has an invalid viewBox: "${viewBox}"`
+                    );
+                }
+
                 const id = file.stem;
-                const offset = index * size;
 
-                svg('path').each((_, path) => {
-                    const pathElement = svg(path);
+                const group = $('<g>').attr(
+                    'transform',
+                    `translate(${-minX} ${offsetY - minY})`
+                );
 
-                    if (offset !== 0) {
-                        pathElement.attr('transform', `translate(0 ${offset})`);
-                    }
-
-                    root.append(pathElement);
+                sourceRoot.contents().each((_, element) => {
+                    group.append($(element));
                 });
+
+                root.append(group);
 
                 root.append(
                     $('<view>').attr({
                         id: `${id}-view`,
-                        viewBox: `0 ${offset} ${size} ${size}`
+                        viewBox: `0 ${offsetY} ${width} ${height}`
                     })
                 );
+
+                spriteWidth = Math.max(spriteWidth, width);
+                offsetY += height;
             });
 
-            root.attr('viewBox', `0 0 ${size} ${files.length * size}`);
+            root.attr(
+                'viewBox',
+                `0 0 ${spriteWidth} ${offsetY}`
+            );
 
             const output = new Vinyl({
                 path: 'sprite-bg.svg',
@@ -273,14 +306,16 @@ export function copyFavicons() {
         fs.copyFileSync(file, out);
     }
 
-    const rootFavicon = 'source/favicon.ico';
-
-    if (fs.existsSync(rootFavicon)) {
-        fs.mkdirSync('build', { recursive: true });
-        fs.copyFileSync(rootFavicon, 'build/favicon.ico');
-    } return Promise.resolve();
+    return Promise.resolve();
 }
 
+export function copyRootFiles() {
+    return gulp.src([
+        'source/favicon.ico',
+        'source/manifest.webmanifest'
+    ], { encoding: false })
+        .pipe(gulp.dest('build'));
+}
 
 export function copyFonts() {
     return gulp.src('source/fonts/**/*.{woff,woff2,ttf,otf}', { encoding: false })
@@ -308,6 +343,10 @@ export function watchFiles() {
     gulp.watch('source/**/*.html', processMarkup);
     gulp.watch('source/sass/**/*.scss', processStyles);
     gulp.watch('source/js/**/*.js', processScripts);
+    gulp.watch(
+        ['source/favicon.ico', 'source/manifest.webmanifest'],
+        copyRootFiles
+    );
 }
 
 
@@ -320,6 +359,7 @@ export const compileProject = gulp.series(
         processStyles,
         processScripts,
         copyFavicons,
+        copyRootFiles,
         copyFonts,
         sprite,
         spriteBg

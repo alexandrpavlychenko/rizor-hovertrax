@@ -13,4 +13,11 @@
         padding: 0;
         max-width: 1920px;
     }
+
+    &--small {
+        @media (min-width: 1240px) {
+            padding: 0 36px;
+            max-width: 1240px;
+        }
+    }
 }
