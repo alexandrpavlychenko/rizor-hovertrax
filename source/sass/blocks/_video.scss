@@ -1,7 +1,19 @@
 @use "../global/variables.scss" as var;
 @use "../global/mixins.scss" as mix;
 
+.video {
+    line-height: 0;
+}
+
 .video__content {
     max-width: 100%;
     height: auto;
+}
+
+.video__button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }

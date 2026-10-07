@@ -11,10 +11,12 @@
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 48px;
+        padding: 0 0 90px;
     }
 
     @media (min-width: var.$desktop-width) {
         justify-content: flex-start;
+        padding: 0 0 87px;
 
         text-align: left;
     }
@@ -84,7 +86,7 @@
 }
 
 .promo__main-heading-numbers {
-    @include mix.font-main-heading-numbers;
+    letter-spacing: -0.16em;
 }
 
 .promo__inscription {
@@ -98,8 +100,9 @@
 
 .promo__video {
     position: relative;
-
     z-index: 1;
+
+    align-self: flex-start;
 }
 
 .promo__video-button {
@@ -111,6 +114,7 @@
 }
 
 .promo__decor-picture {
+    position: absolute;
     top: -35px;
 }
 

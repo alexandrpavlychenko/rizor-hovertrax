@@ -1,0 +1,56 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.advantages {
+    @media (min-width: var.$tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 60px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        justify-content: flex-start;
+    }
+}
+
+.advantages__design-text-content {
+    @media (min-width: var.$tablet-width) {
+        padding: 20px 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 94px 0;
+        max-width: 300px;
+    }
+}
+
+.advantages__heading {
+    margin: 0 0 30px;
+
+    @include mix.font-section-heading;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 50px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        margin: 0 0 80px;
+    }
+}
+
+.advantages__section-number-list {
+    top: -16px;
+}
+
+.advantages__decor-picture {
+    position: absolute;
+
+    top: 1182px;
+}
+
+.advantages__inscription {
+    position: absolute;
+    right: -78px;
+    top: 112px;
+}

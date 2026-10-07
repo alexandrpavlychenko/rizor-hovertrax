@@ -1,0 +1,68 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.subsection {
+    &--large {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: var.$tablet-width) {
+            column-gap: 46px;
+        }
+
+        @media (min-width: var.$desktop-width) {
+            justify-content: flex-start;
+            column-gap: 92px;
+        }
+    }
+}
+
+.subsection__heading {
+    margin: 0 0 22px;
+
+    @include mix.font-section-subheading;
+}
+
+.subsection__text {
+    margin: 0 0 21px;
+}
+
+.subsection__list {
+    @include mix.list-reset;
+
+    margin: 0 0 36px;
+}
+
+.subsection__item {
+    display: flex;
+    column-gap: 13px;
+    margin: 0 0 20px;
+
+    &::before {
+        content: "";
+
+        flex-shrink: 0;
+        margin: 13px 0 0;
+        width: 30px;
+        height: 5px;
+
+        background-color: var.$color-main-text;
+    }
+}
+
+.subsection__item-text {
+    margin: 0;
+}
+
+.subsection__video {
+    position: relative;
+
+    align-self: flex-start;
+}
+
+.subsection--order-alter .subsection__video {
+    @media (min-width: var.$desktop-width) {
+        order: -1;
+    }
+}

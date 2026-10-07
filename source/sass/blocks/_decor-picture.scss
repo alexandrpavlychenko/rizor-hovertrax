@@ -1,8 +1,6 @@
 @use "../global/variables.scss" as var;
 
 .decor-picture {
-    position: absolute;
-
     display: none;
 
     @media (min-width: var.$tablet-width) {

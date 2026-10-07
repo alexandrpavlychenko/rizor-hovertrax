@@ -1,0 +1,25 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.rizor-four-and-zero-inscription {
+    display: none;
+
+    @include mix.font-background;
+
+    @media (min-width: var.$tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 800px;
+    }
+
+    &--position-alter {
+        transform: rotate(270deg);
+    }
+}
+
+.rizor-four-and-zero-inscription__numbers {
+    width: 368px;
+
+    letter-spacing: -0.27em;
+}
