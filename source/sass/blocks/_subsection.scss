@@ -2,6 +2,16 @@
 @use "../global/mixins.scss" as mix;
 
 .subsection {
+    padding: 0 0 45px;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 0;
+    }
+
+    &:not(.subsection--large) {
+        max-width: 300px;
+    }
+
     &--large {
         display: flex;
         flex-wrap: wrap;
@@ -16,6 +26,10 @@
             column-gap: 92px;
         }
     }
+}
+
+.subsection__text-content {
+    max-width: 300px;
 }
 
 .subsection__heading {
