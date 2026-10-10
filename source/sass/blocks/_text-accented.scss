@@ -1,0 +1,6 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.text-accented {
+    @include mix.font-main-text-accented;
+}

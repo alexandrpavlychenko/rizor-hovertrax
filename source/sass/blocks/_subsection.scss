@@ -30,6 +30,10 @@
 
 .subsection__text-content {
     max-width: 300px;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 20px 0;
+    }
 }
 
 .subsection__heading {

@@ -129,3 +129,11 @@
         background-color: var.$color-main-theme;
     }
 }
+
+.video-button--position-alter .video-button__text {
+    @media (min-width: var.$desktop-width) {
+        left: 2px;
+        top: auto;
+        bottom: 22px;
+    }
+}

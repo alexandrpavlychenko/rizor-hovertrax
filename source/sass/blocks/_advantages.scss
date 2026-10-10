@@ -17,6 +17,7 @@
 
     @media (min-width: var.$desktop-width) {
         justify-content: flex-start;
+        row-gap: 150px;
     }
 }
 
@@ -34,11 +35,7 @@
     }
 }
 
-.advantages__design-text-content {
-    @media (min-width: var.$tablet-width) {
-        padding: 20px 0;
-    }
-
+.advantages .advantages__design-text-content {
     @media (min-width: var.$desktop-width) {
         padding: 94px 0;
     }
@@ -49,7 +46,7 @@
         position: relative;
         z-index: 1;
 
-        padding: 20px 0 0;
+        padding: 20px 0;
         margin: 0 0 0 60px;
     }
 
@@ -89,19 +86,16 @@
     }
 
     @media (min-width: var.$desktop-width) {
-        top: -127px;
+        top: -208px;
 
         flex-direction: column;
+        margin: 0 0 -208px;
         padding: 0 538px;
     }
 }
 
 .advantages__indicators .advantages__indicators-text-content {
     max-width: 500px;
-
-    @media (min-width: var.$tablet-width) {
-        padding: 20px 0;
-    }
 
     @media (min-width: var.$desktop-width) {
         padding: 0 27px;
@@ -133,14 +127,52 @@
 
 .advantages__indicators-video {
     @media (min-width: var.$desktop-width) {
-        margin: 20px 0 0;
+        margin: 21px 0 0;
     }
 }
 
-.advantages__modes {
+.advantages .advantages__modes {
     @media (min-width: var.$tablet-width) {
         position: relative;
         z-index: 1;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        column-gap: 43px;
+        padding: 0 0 0 367px;
+    }
+}
+
+.advantages__modes .advantages__modes-text-content {
+    @media (min-width: var.$tablet-width) {
+        max-width: 420px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 84px 0 0;
+    }
+}
+
+.advantages__modes-heading {
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 220px;
+            top: 21px;
+
+            display: block;
+            width: 207px;
+            height: 486px;
+
+            mask-image: url("../img/icons/sprite-bg.svg#modes-arrow-view");
+            mask-repeat: no-repeat;
+            mask-size: 207px 486px;
+            background-color: var.$color-border-table;
+        }
     }
 }
 
@@ -151,7 +183,7 @@
 .advantages__decor-picture {
     position: absolute;
 
-    top: 1182px;
+    top: 1175px;
 }
 
 .advantages__inscription {
