@@ -82,7 +82,62 @@
     }
 }
 
-.advantages__indicators {
+.advantages .advantages__indicators {
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        top: -127px;
+
+        flex-direction: column;
+        padding: 0 538px;
+    }
+}
+
+.advantages__indicators .advantages__indicators-text-content {
+    max-width: 500px;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 20px 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 0 27px;
+    }
+}
+
+.advantages__indicators-heading {
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: -84px;
+            top: 22px;
+
+            display: block;
+            width: 47px;
+            height: 330px;
+
+            mask-image: url("../img/icons/sprite-bg.svg#indicators-arrow-view");
+            mask-repeat: no-repeat;
+            mask-size: 47px 330px;
+            background-color: var.$color-border-table;
+        }
+    }
+}
+
+.advantages__indicators-video {
+    @media (min-width: var.$desktop-width) {
+        margin: 20px 0 0;
+    }
+}
+
+.advantages__modes {
     @media (min-width: var.$tablet-width) {
         position: relative;
         z-index: 1;
