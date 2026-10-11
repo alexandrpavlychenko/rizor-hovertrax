@@ -16,14 +16,17 @@
     }
 
     @media (min-width: var.$desktop-width) {
-        padding: 32px 0;
+        padding: 38px 0;
     }
 }
 
 .description-list__item {
     display: flex;
     flex-direction: column;
-    row-gap: 2px;
+
+    @media (min-width: var.$tablet-width) {
+        row-gap: 8px;
+    }
 }
 
 .description-list__term {

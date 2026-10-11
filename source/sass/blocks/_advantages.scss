@@ -57,9 +57,9 @@
 }
 
 .advantages__color-heading {
-    position: relative;
-
     @media (min-width: var.$tablet-width) {
+        position: relative;
+
         &::before {
             content: "";
 
@@ -173,6 +173,89 @@
             mask-size: 207px 486px;
             background-color: var.$color-border-table;
         }
+    }
+}
+
+.advantages .advantages__battery {
+    @media (min-width: var.$tablet-width) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 540px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        align-items: flex-start;
+        max-width: 908px;
+        padding: 1px 0 0 368px;
+    }
+}
+
+.advantages__battery-heading {
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 257px;
+            top: -239px;
+
+            display: block;
+            width: 200px;
+            height: 264px;
+
+            mask-image: url("../img/icons/sprite-bg.svg#battery-arrow-view");
+            mask-repeat: no-repeat;
+            mask-size: 200px 264px;
+            background-color: var.$color-border-table;
+        }
+    }
+}
+
+.advantages .advantages__battery-text {
+    @media (min-width: var.$tablet-width) {
+        margin: 0;
+    }
+}
+
+.advantages__battery-picture {
+    @media (min-width: var.$tablet-width) {
+        order: -2;
+        width: 367px;
+    }
+}
+
+.advantages .advantages__battery-description-list {
+    margin: 0 auto;
+    max-width: max-content;
+    padding: 21px 0 0;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        top: -98px;
+
+        column-gap: 52px;
+        order: -1;
+        margin: 0 0 -98px;
+        padding: 0 50px 45px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 38px 103px 54px;
+    }
+}
+
+.advantages .advantages__battery-description-list-item {
+    @media (min-width: var.$tablet-width) {
+        row-gap: 0;
+    }
+}
+
+.advantages .advantages__battery-description-list-term {
+    @media (min-width: var.$tablet-width) {
+        padding: 0 3px;
     }
 }
 

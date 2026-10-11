@@ -3,19 +3,17 @@
 
 .subsection {
     padding: 0 0 45px;
+    max-width: 300px;
 
     @media (min-width: var.$tablet-width) {
         padding: 0;
-    }
-
-    &:not(.subsection--large) {
-        max-width: 300px;
     }
 
     &--large {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 100%;
 
         @media (min-width: var.$tablet-width) {
             column-gap: 46px;
