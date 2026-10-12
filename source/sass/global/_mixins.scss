@@ -40,12 +40,13 @@
 
 @mixin font-small-text {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     font-weight: 400;
     color: var.$color-main-text;
 
     @media (min-width: var.$tablet-width) {
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -55,10 +56,10 @@
     color: var.$color-main-background;
 }
 
-@mixin font-small-text-muted {
+@mixin font-small-text-accented {
     @include font-small-text;
 
-    color: var.$color-muted-text;
+    font-weight: 700;
 }
 
 @mixin font-placeholder {
@@ -133,6 +134,7 @@
     line-height: 30px;
     font-weight: 400;
     text-align: center;
+    letter-spacing: 0.02em;
     color: var.$color-main-text;
 
     @media (min-width: var.$tablet-width) {

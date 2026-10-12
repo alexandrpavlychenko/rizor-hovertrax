@@ -1,0 +1,135 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.characteristics-basics__list {
+    @include mix.list-reset;
+
+    padding: 0 0 10px;
+
+    @media (min-width: var.$tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 49px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        justify-content: flex-start;
+        row-gap: 23px;
+    }
+}
+
+.characteristics-basics-list__item {
+    margin: 0 0 32px;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        z-index: 1;
+
+        max-width: 300px;
+        padding: 0 7px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            z-index: -1;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    &--housing {
+        &::before {
+            @media (min-width: var.$tablet-width) {
+                left: -33px;
+                top: -32px;
+
+                width: 89px;
+                height: 67px;
+
+                background-image: url("../img/housing.png");
+            }
+
+            @media (min-width: var.$desktop-width) {
+                left: -53px;
+                top: -32px;
+            }
+        }
+    }
+
+    &--wheels {
+        &::before {
+            @media (min-width: var.$tablet-width) {
+                left: -20px;
+                top: -35px;
+
+                width: 70px;
+                height: 70px;
+
+                background-image: url("../img/wheels.png");
+            }
+
+            @media (min-width: var.$desktop-width) {
+                left: -40px;
+                top: -35px;
+            }
+        }
+    }
+
+    &--power {
+        &::before {
+            @media (min-width: var.$tablet-width) {
+                left: -20px;
+                top: -24px;
+
+                width: 66px;
+                height: 53px;
+
+                background-image: url("../img/power.png");
+            }
+
+            @media (min-width: var.$desktop-width) {
+                left: -40px;
+                top: -24px;
+            }
+        }
+    }
+
+    &--weight {
+        &::before {
+            @media (min-width: var.$tablet-width) {
+                left: -15px;
+                top: -38px;
+
+                width: 62px;
+                height: 68px;
+
+                background-image: url("../img/weight.png");
+            }
+
+            @media (min-width: var.$desktop-width) {
+                left: -35px;
+                top: -38px;
+            }
+        }
+    }
+}
+
+.characteristics-basics-list__item-heading {
+    margin: 0 0 10px;
+
+    @include mix.font-sub-subheading;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 18px;
+    }
+}
+
+.characteristics-basics-list__item-text {
+    margin: 0 0 21px;
+
+    @include mix.font-small-text;
+}
+

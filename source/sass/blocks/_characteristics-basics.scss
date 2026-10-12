@@ -1,0 +1,32 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.characteristics-basics__text-content {
+    @media (min-width: var.$tablet-width) {
+        max-width: 650px;
+    }
+}
+
+.characteristics-basics__heading {
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+        left: -514px;
+        top: 75px;
+    }
+}
+
+.characteristics-basics .characteristics-basics__list {
+    @media (min-width: var.$tablet-width) {
+        margin: 70px 0 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        margin: 168px 0 0;
+    }
+}
+
+.characteristics-basics__picture {
+    @media (min-width: var.$desktop-width) {
+        order: -1;
+    }
+}

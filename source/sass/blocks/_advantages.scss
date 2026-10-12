@@ -13,16 +13,18 @@
         align-items: flex-start;
         row-gap: 70px;
         column-gap: 130px;
+        padding: 0 0 70px;
     }
 
     @media (min-width: var.$desktop-width) {
         justify-content: flex-start;
         row-gap: 150px;
+        padding: 0 0 199px;
     }
 }
 
 .advantages__heading {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
 
     @include mix.font-section-heading;
 
@@ -187,7 +189,7 @@
     @media (min-width: var.$desktop-width) {
         align-items: flex-start;
         max-width: 908px;
-        padding: 1px 0 0 368px;
+        padding: 2px 0 0 368px;
     }
 }
 
@@ -241,7 +243,7 @@
     }
 
     @media (min-width: var.$desktop-width) {
-        padding: 38px 103px 59px;
+        padding: 38px 103px 58px;
     }
 }
 

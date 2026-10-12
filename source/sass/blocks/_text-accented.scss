@@ -3,4 +3,8 @@
 
 .text-accented {
     @include mix.font-main-text-accented;
+
+    &--less-accent {
+        @include mix.font-small-text-accented;
+    }
 }

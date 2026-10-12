@@ -20,13 +20,13 @@
 }
 
 .page__section {
-    position: relative;
-
     padding: 0 0 60px;
 
     text-align: center;
 
     @media (min-width: var.$tablet-width) {
+        position: relative;
+
         padding: 0 0 90px;
     }
 

@@ -1,0 +1,38 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.characteristics__heading {
+    margin: 0 0 20px;
+
+    @include mix.font-section-heading;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 50px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+        left: -514px;
+        top: 76px;
+
+        margin: 0 0 80px;
+    }
+}
+
+.characteristics__section-number-list {
+    top: -14px;
+}
+
+.characteristics__inscription {
+    @media (min-width: var.$tablet-width) {
+        display: none;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        position: absolute;
+        right: -78px;
+        top: 65px;
+
+        display: flex;
+    }
+}

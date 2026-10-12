@@ -44,6 +44,10 @@
     @include mix.font-section-subheading;
 }
 
+.subsection__heading-numbers {
+    letter-spacing: -0.2em;
+}
+
 .subsection__text:first-of-type {
     margin: 0 0 10px;
 }
