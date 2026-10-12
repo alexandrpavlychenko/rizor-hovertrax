@@ -26,6 +26,10 @@
     }
 }
 
+.subsection:last-of-type {
+    padding: 0;
+}
+
 .subsection__text-content {
     max-width: 300px;
 
@@ -40,7 +44,11 @@
     @include mix.font-section-subheading;
 }
 
-.subsection__text {
+.subsection__text:first-of-type {
+    margin: 0 0 10px;
+}
+
+.subsection__text:last-of-type {
     margin: 0 0 21px;
 }
 

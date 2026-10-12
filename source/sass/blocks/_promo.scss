@@ -2,23 +2,15 @@
 @use "../global/mixins.scss" as mix;
 
 .promo {
-    padding: 0 0 60px;
-
-    text-align: center;
-
     @media (min-width: var.$tablet-width) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 48px;
-        padding: 0 0 90px;
     }
 
     @media (min-width: var.$desktop-width) {
         justify-content: flex-start;
-        padding: 0 0 87px;
-
-        text-align: left;
     }
 }
 

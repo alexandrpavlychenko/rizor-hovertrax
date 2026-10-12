@@ -127,7 +127,7 @@
 
 .advantages__indicators-video {
     @media (min-width: var.$desktop-width) {
-        margin: 21px 0 0;
+        margin: 31px 0 0;
     }
 }
 
@@ -228,8 +228,6 @@
 }
 
 .advantages .advantages__battery-description-list {
-    margin: 0 auto;
-    max-width: max-content;
     padding: 21px 0 0;
 
     @media (min-width: var.$tablet-width) {
@@ -243,19 +241,52 @@
     }
 
     @media (min-width: var.$desktop-width) {
-        padding: 38px 103px 54px;
+        padding: 38px 103px 59px;
     }
 }
 
 .advantages .advantages__battery-description-list-item {
     @media (min-width: var.$tablet-width) {
-        row-gap: 0;
+        row-gap: 2px;
     }
 }
 
 .advantages .advantages__battery-description-list-term {
     @media (min-width: var.$tablet-width) {
         padding: 0 3px;
+    }
+}
+
+.advantages .advantages__electronics {
+    max-width: 420px;
+
+    @media (min-width: var.$desktop-width) {
+        margin: -5px 0 0;
+    }
+}
+
+.advantages .advantages__electronics-description-list {
+    @media (min-width: var.$tablet-width) {
+        column-gap: 125px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 18px 0 54px;
+    }
+}
+
+.advantages .advantages__electronics-description-list-item {
+    row-gap: 11px;
+
+    @media (min-width: var.$tablet-width) {
+        row-gap: 21px;
+        max-width: 98px;
+    }
+}
+
+.advantages .advantages__electronics-description-list-item:first-child {
+    @media (min-width: var.$tablet-width) {
+        max-width: 76px;
     }
 }
 
