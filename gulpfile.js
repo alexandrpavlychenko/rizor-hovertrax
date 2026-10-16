@@ -103,40 +103,24 @@ export function processScripts() {
 }
 
 export function sprite() {
-    const iconsPath = 'source/img/icons';
+    const iconsPath = 'source/img/icons/inline';
 
     if (!fs.existsSync(iconsPath)) {
         return Promise.resolve();
     }
 
-    return gulp.src('source/img/icons/*.svg', {allowEmpty: true})
+    return gulp.src(`${iconsPath}/*.svg`, {allowEmpty: true})
         .pipe(svgo({
             full: true,
             plugins: []
         }))
         .pipe(svgstore({inlineSvg: true}))
-        .pipe(through2.obj(function (file, encoding, callback) {
-            const svg = file.contents.toString();
-
-            const $ = load(svg, {
-                xml: true
-            });
-
-            $('symbol').attr({
-                'aria-hidden': 'true',
-                'focusable': 'false'
-            });
-
-            file.contents = Buffer.from($.xml());
-
-            callback(null, file);
-        }))
         .pipe(rename('sprite.svg'))
         .pipe(gulp.dest('build/img/icons'));
 }
 
 export function spriteBg() {
-    const iconsPath = 'source/img/icons';
+    const iconsPath = 'source/img/icons/background';
 
     if (!fs.existsSync(iconsPath)) {
         return Promise.resolve();

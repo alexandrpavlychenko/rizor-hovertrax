@@ -24,6 +24,12 @@
             column-gap: 92px;
         }
     }
+
+    &--alter {
+        background-color: var.$color-main-theme;
+
+        @include mix.font-alter-text;
+    }
 }
 
 .subsection:last-of-type {
@@ -42,6 +48,10 @@
     margin: 0 0 22px;
 
     @include mix.font-section-subheading;
+
+    &--alter {
+        @include mix.font-section-subheading-alter;
+    }
 }
 
 .subsection__heading-numbers {

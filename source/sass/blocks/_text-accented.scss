@@ -7,4 +7,8 @@
     &--less-accent {
         @include mix.font-small-text-accented;
     }
+
+    &--alter {
+        @include mix.font-alter-text-accented;
+    }
 }

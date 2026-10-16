@@ -16,10 +16,20 @@
     &--position-alter {
         transform: rotate(270deg);
     }
+
+    &--alter {
+        @include mix.font-background-alter;
+    }
 }
 
 .rizor-four-and-zero-inscription__numbers {
     width: 368px;
 
     letter-spacing: -0.27em;
+}
+
+.rizor-four-and-zero-inscription--alter .rizor-four-and-zero-inscription__numbers {
+    margin: 0 30px 10px 0;
+
+    letter-spacing: -0.22em;
 }

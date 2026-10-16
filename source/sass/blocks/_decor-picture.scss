@@ -7,9 +7,13 @@
         display: block;
     }
 
-    &--alter {
+    &--alter-position {
         left: 0;
 
         transform: rotate(180deg) scaleY(-1);
+    }
+
+    &--alter-background {
+        opacity: 0.05;
     }
 }

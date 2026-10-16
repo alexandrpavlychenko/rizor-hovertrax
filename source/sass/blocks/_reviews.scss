@@ -1,0 +1,20 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.reviews {
+    background-color: var.$color-main-theme;
+}
+
+.reviews__heading {
+    margin: 0 0 20px;
+
+    @include mix.font-section-heading-alter;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 0 0 50px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        margin: 0 0 80px;
+    }
+}

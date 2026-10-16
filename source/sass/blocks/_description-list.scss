@@ -4,6 +4,7 @@
 .description-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-end;
     row-gap: 20px;
     column-gap: 67px;
@@ -19,8 +20,15 @@
     }
 
     @media (min-width: var.$desktop-width) {
+        justify-content: flex-start;
         margin: 0;
         padding: 39px 0;
+    }
+
+    &--alter {
+        @media (min-width: var.$tablet-width) {
+            column-gap: 106px;
+        }
     }
 }
 
@@ -35,6 +43,10 @@
 
 .description-list__term {
     @include mix.font-main-text-muted;
+}
+
+.description-list--alter .description-list__term {
+    @include mix.font-description-term-alter;
 }
 
 .description-list__definition {

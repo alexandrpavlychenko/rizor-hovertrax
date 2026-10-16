@@ -1,0 +1,87 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.characteristics-audience {
+    max-width: 100%;
+}
+
+.characteristics-audience__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+
+        column-gap: 46px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        justify-content: space-between;
+        column-gap: 80px;
+    }
+}
+
+.characteristics-audience__text-content {
+    max-width: 500px;
+    padding: 40px 0 0;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 60px 0 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        max-width: 740px;
+        padding: 93px 0 20px 370px;
+    }
+}
+
+.characteristics-audience__description-list {
+    padding: 8px 0 40px;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 12px 0 45px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 26px 0;
+    }
+}
+
+.characteristics-audience__image-content {
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+        top: -60px;
+
+        box-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
+        overflow: hidden;
+    }
+}
+
+.characteristics-audience__picture {
+    display: block;
+}
+
+.characteristics-audience__inscription {
+    position: absolute;
+    left: 44px;
+    bottom: -44px;
+
+    display: none;
+
+    @media (min-width: var.$desktop-width) {
+        display: flex;
+    }
+}
+
+.characteristics-audience__decor-picture {
+    @media (min-width: var.$tablet-width) {
+        position: absolute;
+        left: -40px;
+        top: 200px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        left: 0;
+    }
+}

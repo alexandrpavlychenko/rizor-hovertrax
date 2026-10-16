@@ -1,6 +1,22 @@
 @use "../global/variables.scss" as var;
 @use "../global/mixins.scss" as mix;
 
+.characteristics {
+    padding: 0;
+}
+
+.characteristics .characteristics__basics {
+    padding: 0 0 45px;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 0 0 46px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 0 0 167px;
+    }
+}
+
 .characteristics__heading {
     margin: 0 0 20px;
 
@@ -34,5 +50,20 @@
         top: 65px;
 
         display: flex;
+    }
+}
+
+.characteristics .characteristics__audience {
+    padding: 0 0 60px;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        z-index: 1;
+
+        padding: 0 0 90px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 0 0 87px;
     }
 }

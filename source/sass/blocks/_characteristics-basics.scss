@@ -30,3 +30,21 @@
         order: -1;
     }
 }
+
+.characteristics-basics__section-number-list {
+    top: -14px;
+}
+
+.characteristics-basics__inscription {
+    @media (min-width: var.$tablet-width) {
+        display: none;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        position: absolute;
+        right: -78px;
+        top: 65px;
+
+        display: flex;
+    }
+}

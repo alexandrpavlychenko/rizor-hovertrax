@@ -38,6 +38,18 @@
     font-weight: 700;
 }
 
+@mixin font-alter-text-accented {
+    @include font-alter-text;
+
+    font-weight: 700;
+}
+
+@mixin font-description-term-alter {
+    @include font-alter-text;
+
+    color: var.$color-description-term-alter;
+}
+
 @mixin font-small-text {
     font-size: 14px;
     line-height: 20px;
@@ -281,13 +293,14 @@
 @mixin font-background-alter {
     @include font-background;
 
-    color: var.$color-background-inscription-alter;
+    letter-spacing: 0.12em;
+    color: var.$color-description-term-alter;
 }
 
 @mixin font-background-alter-muted {
     @include font-background;
 
-    color: var.$color-background-inscription-alter-muted;
+    color: var.$color-background-inscription-muted;
 }
 
 @mixin list-reset {
