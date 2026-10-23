@@ -1,0 +1,92 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.sections-nav {
+    display: none;
+
+    @media (min-width: var.$desktop-width) {
+        display: block;
+    }
+}
+
+.sections-nav__section-number-list {
+    @include mix.list-reset;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+
+    &::before,
+    &::after {
+        content: "";
+
+        width: 1px;
+        height: 320px;
+
+        background-color: var.$color-main-theme;
+    }
+}
+
+.sections-nav--alter .sections-nav__section-number-list {
+    &::before,
+    &::after {
+        background-color: var.$color-main-background;
+    }
+}
+
+.sections-nav__link {
+    position: relative;
+
+    display: block;
+    border: 1px solid var.$color-main-theme;
+    width: 7px;
+    height: 7px;
+
+    background-color: var.$color-main-theme;
+    border-radius: 50%;
+
+    &--current {
+        width: 17px;
+        height: 17px;
+        border: 2px solid var.$color-main-theme;
+
+        background-color: transparent;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: -8px;
+        right: -8px;
+        top: -8px;
+        bottom: -8px;
+    }
+
+    &:hover,
+    &:focus-visible {
+        background-color: transparent;
+    }
+
+    &:not(.sections-nav__link--current):active {
+        opacity: 0.7;
+    }
+}
+
+.sections-nav--alter .sections-nav__link {
+    border: 1px solid var.$color-main-background;
+
+    background-color: var.$color-main-background;
+
+    &--current {
+        border: 2px solid var.$color-main-background;
+
+        background-color: transparent;
+    }
+
+    &:hover,
+    &:focus-visible {
+        background-color: transparent;
+    }
+}

@@ -292,8 +292,11 @@
     }
 }
 
-.advantages__section-number-list {
+.advantages__sections-nav {
+    position: absolute;
+    right: 83px;
     top: -16px;
+    z-index: 5;
 }
 
 .advantages__decor-picture {

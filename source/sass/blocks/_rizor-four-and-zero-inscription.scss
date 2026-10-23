@@ -6,7 +6,9 @@
 
     @include mix.font-background;
 
-    @media (min-width: var.$tablet-width) {
+    overflow-wrap: normal;
+
+    @media (min-width: var.$desktop-width) {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;

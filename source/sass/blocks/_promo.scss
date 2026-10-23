@@ -53,6 +53,8 @@
 
     @include mix.font-main-heading;
 
+    overflow-wrap: normal;
+
     @media (min-width: var.$tablet-width) {
         margin: 0 0 18px;
     }
@@ -110,7 +112,10 @@
     top: -35px;
 }
 
-.promo__section-number-list {
+.promo__sections-nav {
+    position: absolute;
+    right: 83px;
     top: -15px;
     bottom: -15px;
+    z-index: 5;
 }

@@ -35,14 +35,27 @@
 .description-list__item {
     display: flex;
     flex-direction: column;
+    max-width: 173px;
 
     @media (min-width: var.$tablet-width) {
         row-gap: 12px;
+    }
+
+    &--small {
+        width: 100px;
+
+        @media (min-width: var.$tablet-width) {
+            row-gap: 2px;
+        }
     }
 }
 
 .description-list__term {
     @include mix.font-main-text-muted;
+
+    &--small {
+        @include mix.font-small-text-muted;
+    }
 }
 
 .description-list--alter .description-list__term {

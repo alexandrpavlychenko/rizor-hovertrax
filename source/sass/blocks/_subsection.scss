@@ -66,6 +66,10 @@
     margin: 0 0 21px;
 }
 
+.subsection__text--small {
+    @include mix.font-small-text;
+}
+
 .subsection__list {
     @include mix.list-reset;
 

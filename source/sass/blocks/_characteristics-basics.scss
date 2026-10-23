@@ -31,8 +31,11 @@
     }
 }
 
-.characteristics-basics__section-number-list {
-    top: -14px;
+.characteristics-basics__sections-nav {
+    position: absolute;
+    right: 83px;
+    top: -15px;
+    z-index: 5;
 }
 
 .characteristics-basics__inscription {

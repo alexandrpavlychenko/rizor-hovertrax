@@ -68,6 +68,12 @@
     color: var.$color-main-background;
 }
 
+@mixin font-small-text-muted {
+    @include font-small-text;
+
+    color: var.$color-muted-text;
+}
+
 @mixin font-small-text-accented {
     @include font-small-text;
 

@@ -16,6 +16,8 @@
 
     @include mix.font-main-text;
 
+    overflow-wrap: anywhere;
+
     background-color: var.$color-main-background;
 }
 

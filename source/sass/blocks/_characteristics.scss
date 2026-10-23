@@ -35,10 +35,6 @@
     }
 }
 
-.characteristics__section-number-list {
-    top: -14px;
-}
-
 .characteristics__inscription {
     @media (min-width: var.$tablet-width) {
         display: none;
@@ -64,6 +60,6 @@
     }
 
     @media (min-width: var.$desktop-width) {
-        padding: 0 0 87px;
+        padding: 0 0 105px;
     }
 }

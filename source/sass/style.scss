@@ -18,7 +18,7 @@
 @use "blocks/video";
 @use "blocks/video-button";
 @use "blocks/decor-picture";
-@use "blocks/section-number-list";
+@use "blocks/sections-nav";
 @use "blocks/advantages";
 @use "blocks/subsection";
 @use "blocks/color-tab";
@@ -30,5 +30,8 @@
 @use "blocks/characteristics-basics-list";
 @use "blocks/characteristics-audience";
 @use "blocks/reviews";
-
+@use "blocks/user-ratings";
+@use "blocks/slider";
+@use "blocks/slider-main-content";
 @use "blocks/slides-list";
+@use "blocks/your-rating";

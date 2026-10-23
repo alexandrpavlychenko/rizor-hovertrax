@@ -38,6 +38,8 @@
 }
 
 .color-tab__menu-button {
+    position: relative;
+
     display: block;
     border: none;
     width: 18px;
@@ -75,6 +77,16 @@
 
     &--black {
         background-color: #0c0c0c;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: -17px;
+        right: -17px;
+        top: -17px;
+        bottom: -17px;
     }
 }
 

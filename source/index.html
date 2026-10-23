@@ -25,7 +25,7 @@
 <body class="page__body">
     <header class="page__header page-header">
         <div class="container container--small">
-            <nav class="page-header__main-nav page-header__main-nav--opened">
+            <nav aria-label="Main" class="page-header__main-nav page-header__main-nav--opened">
                 <div class="page-header__main-nav-logo-burger-wrapper">
                     <a href="index.html" aria-label="Rizor Hovertrax home page." class="page-header__logo logo">
                         <picture class="logo__picture">
@@ -58,7 +58,7 @@
     </header>
     <main class="page__main">
         <div class="container">
-            <section class="page__section promo">
+            <section id="section-promo" class="page__section promo">
                 <div class="promo__text-content">
                     <h1 class="promo__main-heading">Rizor Hovertrax <span class="promo__main-heading-numbers">4.0</span></h1>
                     <h2 class="visually-hidden">Introduction</h2>
@@ -78,13 +78,27 @@
                     <source type="image/webp" srcset="img/webp/gear.webp">
                     <img class="promo__decor-image" src="img/gear.png" width="511" height="878" loading="lazy" alt="">
                 </picture>
-                <ol aria-hidden="true" class="promo__section-number-list section-number-list">
-                    <li class="section-number-list__item section-number-list__item--current"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                </ol>
+                <nav aria-label="Sections" class="promo__sections-nav sections-nav">
+                    <ol class="sections-nav__section-number-list">
+                        <li aria-current="location" class="sections-nav__item">
+                            <span class="sections-nav__link sections-nav__link--current">
+                                <span class="visually-hidden">Introduction</span>
+                            </span>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-advantages" aria-label="Advantages" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-characteristics" aria-label="Characteristics" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-reviews" aria-label="Reviews" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-models-comparison" aria-label="Model comparison" class="sections-nav__link"></a>
+                        </li>
+                    </ol>
+                </nav>
             </section>
             <section id="section-advantages" class="page__section advantages">
                 <div class="advantages__design subsection subsection--large subsection--order-alter">
@@ -298,13 +312,27 @@
                         </button>
                     </div>
                 </div>
-                <ol aria-hidden="true" class="advantages__section-number-list section-number-list">
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item section-number-list__item--current"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                </ol>
+                <nav aria-label="Sections" class="advantages__sections-nav sections-nav">
+                    <ol class="sections-nav__section-number-list">
+                        <li class="sections-nav__item">
+                            <a href="#section-promo" aria-label="Introduction" class="sections-nav__link"></a>
+                        </li>
+                        <li aria-current="location" class="sections-nav__item">
+                            <span class="sections-nav__link sections-nav__link--current">
+                                <span class="visually-hidden">Advantages</span>
+                            </span>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-characteristics" aria-label="Characteristics" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-reviews" aria-label="Reviews" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-models-comparison" aria-label="Model comparison" class="sections-nav__link"></a>
+                        </li>
+                    </ol>
+                </nav>
                 <picture class="advantages__decor-picture decor-picture decor-picture--alter-position">
                     <source type="image/avif" srcset="img/avif/gear.avif">
                     <source type="image/webp" srcset="img/webp/gear.webp">
@@ -343,13 +371,27 @@
                         <source type="image/webp" srcset="img/webp/characteristics-photo.webp">
                         <img class="characteristics-basics__image" src="img/characteristics-photo.png" width="789" height="844" loading="lazy" alt="Black Rizor Hovertrax 4.0.">
                     </picture>
-                    <ol aria-hidden="true" class="characteristics-basics__section-number-list section-number-list">
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item section-number-list__item--current"></li>
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item"></li>
-                    </ol>
+                    <nav aria-label="Sections" class="characteristics-basics__sections-nav sections-nav">
+                        <ol class="sections-nav__section-number-list">
+                            <li class="sections-nav__item">
+                                <a href="#section-promo" aria-label="Introduction" class="sections-nav__link"></a>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-advantages" aria-label="Advantages" class="sections-nav__link"></a>
+                            </li>
+                            <li aria-current="location" class="sections-nav__item">
+                                <span class="sections-nav__link sections-nav__link--current">
+                                    <span class="visually-hidden">Characteristics</span>
+                                </span>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-reviews" aria-label="Reviews" class="sections-nav__link"></a>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-models-comparison" aria-label="Model comparison" class="sections-nav__link"></a>
+                            </li>
+                        </ol>
+                    </nav>
                     <span aria-hidden="true" class="characteristics-basics__inscription rizor-four-and-zero-inscription rizor-four-and-zero-inscription--position-alter"><span class="rizor-four-and-zero-inscription__numbers">4.0</span> Rizor</span>
                 </div>
             </div>
@@ -401,186 +443,200 @@
             <div class="container">
                 <div class="reviews__user-ratings user-ratings subsection">
                     <h2 class="reviews__heading">Reviews</h2>
-                    <h3 class="subsection__heading subsection__heading--alter">User ratings</h3>
-                    <div class="subsection__slider subsection-slider">
-                        <div class="subsection__slider-main-content subsection-slider-main-content">
-                            <ul class="subsection-slider__list slides-list">
+                    <h3 class="user-ratings__heading subsection__heading subsection__heading--alter">User ratings</h3>
+                    <div class="subsection__slider slider">
+                        <div class="slider__main-content slider-main-content">
+                            <ul class="slider-main-content__slides-list slides-list">
                                 <li id="review-1" class="slides-list__item">
-                                    <div class="subsection__text-content">
-                                        <figure class="subsection__figure-quote">
-                                            <figcaption class="subsection__figure-quote-caption">
-                                                <h4 class="subsection__item-heading subsection__item-heading--small">Semen Konstantinopolskiy</h4>
+                                    <div class="subsection__text-content slides-list__text-content">
+                                        <figure class="slides-list__figure-quote">
+                                            <figcaption class="slides-list__figure-quote-caption">
+                                                <h4 class="slides-list__item-heading">Semen Konstantinopolskiy</h4>
                                             </figcaption>
-                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
+                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you&nbsp;ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
                                         </figure>
-                                        <dl class="subsection__description-list description-list">
-                                            <div class="description-list__item">
+                                        <dl class="subsection__description-list slides-list__description-list description-list">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Overall rating</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Reliability</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Safety</dt>
-                                                <dd class="description-list__definition description-list__definition--small">4</dd>
+                                                <dd class="description-list__definition">4</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Appearance</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
                                         </dl>
                                     </div>
-                                    <picture class="subsection__picture">
+                                    <picture class="slides-list__picture">
                                         <source type="image/avif" srcset="img/avif/semen-konstantinopolskiy.avif">
                                         <source type="image/webp" srcset="img/webp/semen-konstantinopolskiy.webp">
-                                        <img class="subsection__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
+                                        <img class="slides-list__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
                                     </picture>
                                 </li>
                                 <li id="review-2" class="slides-list__item slides-list__item--current">
-                                    <div class="subsection__text-content">
-                                        <figure class="subsection__figure-quote">
-                                            <figcaption class="subsection__figure-quote-caption">
-                                                <h4 class="subsection__item-heading subsection__item-heading--small">Semen Konstantinopolskiy</h4>
+                                    <div class="subsection__text-content slides-list__text-content">
+                                        <figure class="slides-list__figure-quote">
+                                            <figcaption class="slides-list__figure-quote-caption">
+                                                <h4 class="slides-list__item-heading">Semen Konstantinopolskiy</h4>
                                             </figcaption>
-                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
+                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you&nbsp;ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
                                         </figure>
-                                        <dl class="subsection__description-list description-list">
-                                            <div class="description-list__item">
+                                        <dl class="subsection__description-list slides-list__description-list description-list">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Overall rating</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Reliability</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Safety</dt>
-                                                <dd class="description-list__definition description-list__definition--small">4</dd>
+                                                <dd class="description-list__definition">4</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Appearance</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
                                         </dl>
                                     </div>
-                                    <picture class="subsection__picture">
+                                    <picture class="slides-list__picture">
                                         <source type="image/avif" srcset="img/avif/semen-konstantinopolskiy.avif">
                                         <source type="image/webp" srcset="img/webp/semen-konstantinopolskiy.webp">
-                                        <img class="subsection__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
+                                        <img class="slides-list__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
                                     </picture>
                                 </li>
                                 <li id="review-3" class="slides-list__item">
-                                    <div class="subsection__text-content">
-                                        <figure class="subsection__figure-quote">
-                                            <figcaption class="subsection__figure-quote-caption">
-                                                <h4 class="subsection__item-heading subsection__item-heading--small">Semen Konstantinopolskiy</h4>
+                                    <div class="subsection__text-content slides-list__text-content">
+                                        <figure class="slides-list__figure-quote">
+                                            <figcaption class="slides-list__figure-quote-caption">
+                                                <h4 class="slides-list__item-heading">Semen Konstantinopolskiy</h4>
                                             </figcaption>
-                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
+                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you&nbsp;ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
                                         </figure>
-                                        <dl class="subsection__description-list description-list">
-                                            <div class="description-list__item">
+                                        <dl class="subsection__description-list slides-list__description-list description-list">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Overall rating</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Reliability</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Safety</dt>
-                                                <dd class="description-list__definition description-list__definition--small">4</dd>
+                                                <dd class="description-list__definition">4</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Appearance</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
                                         </dl>
                                     </div>
-                                    <picture class="subsection__picture">
+                                    <picture class="slides-list__picture">
                                         <source type="image/avif" srcset="img/avif/semen-konstantinopolskiy.avif">
                                         <source type="image/webp" srcset="img/webp/semen-konstantinopolskiy.webp">
-                                        <img class="subsection__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
+                                        <img class="slides-list__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
                                     </picture>
                                 </li>
                                 <li id="review-4" class="slides-list__item">
-                                    <div class="subsection__text-content">
-                                        <figure class="subsection__figure-quote">
-                                            <figcaption class="subsection__figure-quote-caption">
-                                                <h4 class="subsection__item-heading subsection__item-heading--small">Semen Konstantinopolskiy</h4>
+                                    <div class="subsection__text-content slides-list__text-content">
+                                        <figure class="slides-list__figure-quote">
+                                            <figcaption class="slides-list__figure-quote-caption">
+                                                <h4 class="slides-list__item-heading">Semen Konstantinopolskiy</h4>
                                             </figcaption>
-                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
+                                            <blockquote class="subsection__text subsection__text--small">I&nbsp;liked the&nbsp;hoverboard. The&nbsp;plastic feels sturdy, and&nbsp;the&nbsp;lighting looks nice. The&nbsp;battery still lasts for&nbsp;about an&nbsp;hour of&nbsp;active riding even after&nbsp;a&nbsp;year. The&nbsp;platform is&nbsp;rubberised and&nbsp;provides good grip, but&nbsp;if&nbsp;you&nbsp;ride at&nbsp;top&nbsp;speed, you&nbsp;can still fall&nbsp;off.</blockquote>
                                         </figure>
-                                        <dl class="subsection__description-list description-list">
-                                            <div class="description-list__item">
+                                        <dl class="subsection__description-list slides-list__description-list description-list">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Overall rating</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Reliability</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Safety</dt>
-                                                <dd class="description-list__definition description-list__definition--small">4</dd>
+                                                <dd class="description-list__definition">4</dd>
                                             </div>
-                                            <div class="description-list__item">
+                                            <div class="description-list__item description-list__item--small">
                                                 <dt class="description-list__term description-list__term--small">Appearance</dt>
-                                                <dd class="description-list__definition description-list__definition--small">5</dd>
+                                                <dd class="description-list__definition">5</dd>
                                             </div>
                                         </dl>
                                     </div>
-                                    <picture class="subsection__picture">
+                                    <picture class="slides-list__picture">
                                         <source type="image/avif" srcset="img/avif/semen-konstantinopolskiy.avif">
                                         <source type="image/webp" srcset="img/webp/semen-konstantinopolskiy.webp">
-                                        <img class="subsection__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
+                                        <img class="slides-list__image" src="img/semen-konstantinopolskiy.png" width="370" height="381" loading="lazy" alt="Photo of Semen Konstantinopolskiy.">
                                     </picture>
                                 </li>
                             </ul>
-                            <ul class="subsection-slider-main-content__controls-list">
-                                <li class="subsection-slider-main-content__controls-item">
-                                    <button type="button" class="subsection-slider-main-content__button">
+                            <ul class="slider-main-content__controls-list">
+                                <li class="slider-main-content__controls-item">
+                                    <button type="button" class="slider-main-content__button  slider-main-content__button--prev">
                                         <span class="visually-hidden">Previous slide</span>
                                     </button>
                                 </li>
-                                <li class="subsection-slider-main-content__controls-item">
-                                    <button type="button" class="subsection-slider-main-content__button subsection-slider-main-content__button--next">
+                                <li class="slider-main-content__controls-item">
+                                    <button type="button" class="slider-main-content__button">
                                         <span class="visually-hidden">Next slide</span>
                                     </button>
                                 </li>
                             </ul>
                         </div>
-                        <ul class="subsection-slider__controls-list">
-                            <li class="subsection-slider__controls-item">
-                                <button aria-controls="review-1" aria-current="false" type="button" class="subsection-slider__controls-button">
+                        <ul class="slider__pagination-list">
+                            <li class="slider__pagination-item">
+                                <button aria-controls="review-1" type="button" class="slider__pagination-button">
                                     <span class="visually-hidden">Slide&nbsp;1</span>
                                 </button>
                             </li>
-                            <li class="subsection-slider__controls-item">
-                                <button aria-controls="review-2" aria-current="true" type="button" class="subsection-slider__controls-button subsection-slider__controls-button--active">
+                            <li class="slider__pagination-item">
+                                <button aria-controls="review-2" aria-current="true" type="button" class="slider__pagination-button slider__pagination-button--active">
                                     <span class="visually-hidden">Slide&nbsp;2</span>
                                 </button>
                             </li>
-                            <li class="subsection-slider__controls-item">
-                                <button aria-controls="review-3" aria-current="false" type="button" class="subsection-slider__controls-button">
+                            <li class="slider__pagination-item">
+                                <button aria-controls="review-3" type="button" class="slider__pagination-button">
                                     <span class="visually-hidden">Slide&nbsp;3</span>
                                 </button>
                             </li>
-                            <li class="subsection-slider__controls-item">
-                                <button aria-controls="review-4" aria-current="false" type="button" class="subsection-slider__controls-button">
+                            <li class="slider__pagination-item">
+                                <button aria-controls="review-4" type="button" class="slider__pagination-button">
                                     <span class="visually-hidden">Slide&nbsp;4</span>
                                 </button>
                             </li>
                         </ul>
                     </div>
-                    <ol aria-hidden="true" class="reviews__section-number-list section-number-list section-number-list--alter">
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item"></li>
-                        <li class="section-number-list__item section-number-list__item--current"></li>
-                        <li class="section-number-list__item"></li>
-                    </ol>
+                    <nav aria-label="Sections" class="user-ratings__sections-nav sections-nav sections-nav--alter">
+                        <ol class="sections-nav__section-number-list">
+                            <li class="sections-nav__item">
+                                <a href="#section-promo" aria-label="Introduction" class="sections-nav__link"></a>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-advantages" aria-label="Advantages" class="sections-nav__link"></a>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-characteristics" aria-label="Characteristics" class="sections-nav__link"></a>
+                            </li>
+                            <li aria-current="location" class="sections-nav__item">
+                                <span class="sections-nav__link sections-nav__link--current">
+                                    <span class="visually-hidden">Reviews</span>
+                                </span>
+                            </li>
+                            <li class="sections-nav__item">
+                                <a href="#section-models-comparison" aria-label="Model comparison" class="sections-nav__link"></a>
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
                 <div class="reviews__your-rating your-rating subsection">
                     <div class="subsection__text-content">
@@ -647,11 +703,13 @@
         <div class="container">
             <section id="section-models-comparison" class="page__section models-comparison subsection subsection--large">
                 <div class="subsection__text-content">
-                    <h2 class="models-comparison__title">Models comparison</h2>
+                    <h2 class="models-comparison__title">Model comparison</h2>
                     <table class="subsection__table table">
                         <thead class="table__head">
                             <tr class="table__row">
-                                <th></th>
+                                <th>
+                                    <span class="visually-hidden">Model characteristic</span>
+                                </th>
                                 <th scope="col" class="table__data">4.0</th>
                                 <th scope="col" class="table__data">3.0</th>
                             </tr>
@@ -706,13 +764,27 @@
                     <source type="image/webp" srcset="img/webp/comparison-photo.webp">
                     <img class="models-comparison__image" src="img/comparison-photo.png" width="511" height="878" loading="lazy" alt="Rizor Hovertrax 4.0">
                 </picture>
-                <ol aria-hidden="true" class="models-comparison__section-number-list section-number-list">
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item"></li>
-                    <li class="section-number-list__item section-number-list__item--current"></li>
-                </ol>
+                <nav aria-label="Sections" class="models-comparison__sections-nav sections-nav">
+                    <ol class="sections-nav__section-number-list">
+                        <li class="sections-nav__item">
+                            <a href="#section-promo" aria-label="Introduction" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-advantages" aria-label="Advantages" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-characteristics" aria-label="Characteristics" class="sections-nav__link"></a>
+                        </li>
+                        <li class="sections-nav__item">
+                            <a href="#section-reviews" aria-label="Reviews" class="sections-nav__link"></a>
+                        </li>
+                        <li aria-current="location" class="sections-nav__item">
+                            <span class="sections-nav__link sections-nav__link--current">
+                                <span class="visually-hidden">Model comparison</span>
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
                 <picture class="models-comparison__decor-picture">
                     <source type="image/avif" srcset="img/avif/gear.avif">
                     <source type="image/webp" srcset="img/webp/gear.webp">
