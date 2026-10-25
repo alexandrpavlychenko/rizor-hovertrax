@@ -18,3 +18,12 @@ a {
         outline: none;
     }
 }
+
+button,
+input,
+select,
+textarea {
+    &:focus-visible {
+        outline: none;
+    }
+}

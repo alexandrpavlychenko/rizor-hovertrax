@@ -5,7 +5,13 @@
     min-width: 100%;
 
     @media (min-width: var.$tablet-width) {
-        padding: 0 0 74px;
+        padding: 0 0 67px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+
+        padding: 0 0 97px;
     }
 }
 

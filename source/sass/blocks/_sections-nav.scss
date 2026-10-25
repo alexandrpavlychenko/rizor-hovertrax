@@ -67,6 +67,8 @@
     &:hover,
     &:focus-visible {
         background-color: transparent;
+
+        cursor: pointer;
     }
 
     &:not(.sections-nav__link--current):active {

@@ -83,12 +83,24 @@
 @mixin font-placeholder {
     font-size: 16px;
     line-height: 22px;
-    font-weight: 500;
+    font-weight: 700;
     color: var.$color-main-background;
 
     @media (min-width: var.$tablet-width) {
-        font-size: 20px;
-        line-height: 26px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+@mixin font-textarea {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: var.$color-main-background;
+
+    @media (min-width: var.$tablet-width) {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 
@@ -222,20 +234,20 @@
 @mixin font-button-main {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var.$color-main-theme;
+    color: var.$color-main-background;
 
     @media (min-width: var.$tablet-width) {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 22px;
     }
 }
 
 @mixin font-button-alter {
     @include font-button-main;
-    color: var.$color-main-background;
+    color: var.$color-main-theme;
 }
 
 @mixin font-button-watch {

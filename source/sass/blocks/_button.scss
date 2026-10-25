@@ -1,0 +1,41 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.button {
+    border: none;
+    padding: 14px 40px;
+
+    @include mix.font-button-main;
+
+    background-color: var.$color-main-theme;
+    border-radius: 22px;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 0.2);
+
+    &:hover,
+    &:focus-visible {
+        color: var.$color-main-theme;
+
+        background-color: var.$color-main-background;
+
+        cursor: pointer;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+
+    &--alter {
+        padding: 16px 100px 12px;
+
+        @include mix.font-button-alter;
+
+        background-color: var.$color-main-background;
+
+        &:hover,
+        &:focus-visible {
+            color: var.$color-main-background;
+
+            background-color: var.$color-main-text;
+        }
+    }
+}

@@ -1,6 +1,12 @@
 @use "../global/variables.scss" as var;
 @use "../global/mixins.scss" as mix;
 
+.characteristics-basics {
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+    }
+}
+
 .characteristics-basics__text-content {
     @media (min-width: var.$tablet-width) {
         max-width: 650px;

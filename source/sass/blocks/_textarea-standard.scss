@@ -1,0 +1,17 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.textarea-standard {
+    border: 1px solid var.$color-main-background;
+    padding: 17px 30px;
+
+    @include mix.font-textarea;
+
+    background-color: transparent;
+
+    resize: none;
+
+    &:focus-visible {
+        border: 2px solid var.$color-main-background;
+    }
+}

@@ -1,0 +1,25 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.box-select {
+    position: relative;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        right: 31px;
+        top: 25px;
+
+        display: block;
+        width: 12px;
+        height: 20px;
+
+        mask-image: url("../img/icons/sprite-bg.svg#slider-arrow-view");
+        mask-repeat: no-repeat;
+        mask-size: 12px 20px;
+        background-color: var.$color-main-background;
+
+        transform: rotate(90deg);
+    }
+}

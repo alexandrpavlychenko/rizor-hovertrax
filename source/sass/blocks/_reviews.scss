@@ -2,7 +2,17 @@
 @use "../global/mixins.scss" as mix;
 
 .reviews {
+    padding: 0 0 30px;
+
     background-color: var.$color-main-theme;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 0 0 60px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 0 0 66px;
+    }
 }
 
 .reviews__heading {
@@ -17,5 +27,31 @@
     @media (min-width: var.$desktop-width) {
         padding: 0 467px 0;
         margin: 0 0 80px;
+    }
+}
+
+.reviews .reviews__your-rating {
+    @media (min-width: var.$desktop-width) {
+        padding: 0 368px;
+    }
+}
+
+.reviews__inscription {
+    @media (min-width: var.$desktop-width) {
+        position: absolute;
+        right: 77px;
+        bottom: -30px;
+
+        @include mix.font-background-alter-muted;
+
+        letter-spacing: 0.05em;
+    }
+}
+
+.reviews__inscription .reviews__inscription-numbers {
+    @media (min-width: var.$desktop-width) {
+        margin: 0;
+
+        letter-spacing: -0.26em;
     }
 }
