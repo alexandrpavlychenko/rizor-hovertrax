@@ -106,9 +106,10 @@
 
 @mixin font-text-extra-small {
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
     font-weight: 400;
-    color: var.$color-border-table;
+    text-align: center;
+    color: var.$color-muted-text;
 }
 
 @mixin font-main-heading {

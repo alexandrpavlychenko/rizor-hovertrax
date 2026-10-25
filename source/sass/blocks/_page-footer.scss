@@ -1,0 +1,10 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.page-footer {
+    background-color: var.$color-alter-background;
+}
+
+.page-footer__copyright {
+    @include mix.font-text-extra-small;
+}

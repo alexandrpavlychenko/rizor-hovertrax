@@ -1,0 +1,95 @@
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mix;
+
+.models-comparison {
+    max-width: 100%;
+
+    @media (min-width: var.$desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 124px;
+    }
+}
+
+.models-comparison__text-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 0 0;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        z-index: 1;
+
+        width: max-content;
+        max-width: 100%;
+        padding: 60px 0 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        padding: 89px 0 60px;
+    }
+}
+
+.models-comparison__heading {
+    @include mix.font-section-heading;
+}
+
+.models-comparison__table {
+    margin: 0 auto;
+
+    @media (min-width: 610px) {
+        margin: 20px auto 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        margin: 60px auto 0;
+    }
+}
+
+.models-comparison__button {
+    margin: 30px auto 60px;
+
+    @media (min-width: var.$tablet-width) {
+        margin: 30px auto 72px;
+    }
+
+    @media (min-width: 1541px) {
+        margin: 30px auto 46px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+        margin: 60px 0;
+    }
+}
+
+.models-comparison__picture {
+    align-self: flex-start;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
+
+    @media (min-width: var.$desktop-width) {
+        position: relative;
+        top: -40px;
+        z-index: 1;
+
+        order: -1;
+    }
+}
+
+.models-comparison__sections-nav {
+    position: absolute;
+    right: 84px;
+    top: 71px;
+    z-index: 5;
+}
+
+.models-comparison__decor-picture {
+    position: absolute;
+    right: 0;
+    top: 38px;
+
+    display: none;
+
+    @media (min-width: var.$desktop-width) {
+        display: block;
+    }
+}
