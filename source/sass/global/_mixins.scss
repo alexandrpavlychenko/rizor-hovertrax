@@ -50,6 +50,13 @@
     color: var.$color-description-term-alter;
 }
 
+@mixin font-error {
+    @include font-main-text;
+
+    text-align: center;
+    color: var.$color-invalid;
+}
+
 @mixin font-small-text {
     font-size: 14px;
     line-height: 20px;

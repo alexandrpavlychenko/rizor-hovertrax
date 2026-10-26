@@ -43,6 +43,12 @@
     }
 }
 
+.advantages .advantages__design-video-notice {
+    @media (min-width: var.$desktop-width) {
+        bottom: 35%;
+    }
+}
+
 .advantages .advantages__color {
     @media (min-width: var.$tablet-width) {
         position: relative;
@@ -289,6 +295,12 @@
 .advantages .advantages__electronics-description-list-item:first-child {
     @media (min-width: var.$tablet-width) {
         max-width: 76px;
+    }
+}
+
+.advantages .advantages__electronics-video-notice {
+    @media (min-width: var.$tablet-width) {
+        bottom: 20%;
     }
 }
 
