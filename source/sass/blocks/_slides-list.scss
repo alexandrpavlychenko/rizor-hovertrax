@@ -4,10 +4,13 @@
 .slides-list {
     @include mix.list-reset;
 
+    touch-action: pan-y;
+
     @media (min-width: var.$desktop-width) {
         display: flex;
 
         transform: translateX(-547px);
+        transition: transform 0.3s ease;
     }
 }
 
